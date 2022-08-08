@@ -16,13 +16,14 @@ namespace EndersCards.Cards
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{EndersCards.ModInitials}][Card] {GetTitle()} has been setup.");
             gun.bulletDamageMultiplier = 3f;
-            gun.destroyBulletAfter = .05f;
-            gun.projectileSpeed = 1f;
+            gun.destroyBulletAfter = .07f;
+            
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             //Edits values on player when card is selected
             UnityEngine.Debug.Log($"[{EndersCards.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
+            gun.projectileSpeed = 1f;
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -36,7 +37,7 @@ namespace EndersCards.Cards
         }
         protected override string GetDescription()
         {
-            return "On block, skips everyone forward in time.";
+            return "On block, skips everyone forward in time. (Not Working)";
         }
         protected override GameObject GetCardArt()
         {
