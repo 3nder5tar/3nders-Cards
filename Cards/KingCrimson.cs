@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace EndersCards.Cards
 {
-    class Template : CustomCard
+    class KingCrimson : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
@@ -29,11 +29,11 @@ namespace EndersCards.Cards
 
         protected override string GetTitle()
         {
-            return "CardName";
+            return "King Crimson";
         }
         protected override string GetDescription()
         {
-            return "CardDescription";
+            return "On block, skips everyone forward in time.";
         }
         protected override GameObject GetCardArt()
         {
@@ -41,7 +41,7 @@ namespace EndersCards.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Common;
+            return CardInfo.Rarity.Rare;
         }
         protected override CardInfoStat[] GetStats()
         {
@@ -58,7 +58,7 @@ namespace EndersCards.Cards
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.DestructiveRed;
         }
         public override string GetModName()
         {
