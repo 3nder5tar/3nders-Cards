@@ -38,6 +38,7 @@ namespace EndersCards
             CustomCard.BuildCard<Pee>();
             CustomCard.BuildCard<Violence>();
             CustomCard.BuildCard<HyperLeech>();
+            CustomCard.BuildCard<Loser>();
         }
     }
 }
