@@ -15,6 +15,9 @@ namespace EndersCards.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{EndersCards.ModInitials}][Card] {GetTitle()} has been setup.");
+            gun.bulletDamageMultiplier = 3f;
+            gun.destroyBulletAfter = .05f;
+            gun.projectileSpeed = 1f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -50,8 +53,15 @@ namespace EndersCards.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Effect",
-                    amount = "No",
+                    stat = "Damage",
+                    amount = "+200%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "Range",
+                    amount = "Very Short",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };

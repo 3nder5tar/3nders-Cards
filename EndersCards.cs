@@ -34,6 +34,7 @@ namespace EndersCards
         {
             instance = this;
             CustomCard.BuildCard<TheHand>();
+            CustomCard.BuildCard<KingCrimson>();
         }
     }
 }

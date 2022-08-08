@@ -17,7 +17,8 @@ namespace EndersCards.Cards
             UnityEngine.Debug.Log($"[{EndersCards.ModInitials}][Card] {GetTitle()} has been setup.");
             block.forceToAdd = 20f;
             block.cdAdd = 0.5f;
-            gun.knockback = -4.00f;
+            gun.knockback = -5.00f;
+            
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -61,7 +62,7 @@ namespace EndersCards.Cards
                 {
                     positive = true,
                     stat = "Knockback",
-                    amount = "-400%",
+                    amount = "-500%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
