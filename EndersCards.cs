@@ -36,6 +36,8 @@ namespace EndersCards
             CustomCard.BuildCard<TheHand>();
             CustomCard.BuildCard<KingCrimson>();
             CustomCard.BuildCard<Pee>();
+            CustomCard.BuildCard<Violence>();
+            CustomCard.BuildCard<HyperLeech>();
         }
     }
 }
